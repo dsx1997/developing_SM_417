@@ -76,6 +76,43 @@ class ExamController extends Controller
         $d['messages'] = $this->message_repo->getMessages(Auth::user()->phone);
         return view('pages.support_team.exams.index', $d);
     }
+    
+    public function exams2()
+    {
+        $d['exams'] = $this->exam->all();
+        $d['forms'] = $this->my_class->getAllForms();
+        $d['myclasses'] = $this->my_class->getAllMyClasses();
+        $d['types'] = Qs::getUserType();
+        $d['teachers'] = $this->teachers->getAllTeachers();
+        $d['grades'] = $this->my_class->allClassTypeWithNotNull();
+        $d['subjects'] = $this->my_class->allSubjects();
+        $d['subjects'] = $this->my_class->fifteenSubject();
+        $d['deleteds'] = $this->exam->getAllExamFormsByDeleted();
+        $user_id = Qs::getUserID();
+        if ($this->teachers->findTeacherbyUserID($user_id) !== null) {
+            $teacher_id = $this->teachers->findTeacherbyUserID($user_id)->id;
+            $d['hasmyownclass'] = (count($this->my_class->getClassByTeacher($teacher_id)) > 0) ? 1 : 0;
+            $d['hasmyownsubjectclass'] = (count($this->my_class->getClassSubjects($teacher_id)) > 0) ? 1 : 0;
+            $d['hasmyownform'] = (count($this->my_class->findFormbyteahcer_id($teacher_id)) > 0) ? 1 : 0;
+        } else {
+            $d['hasmyownclass'] = 0;
+            $d['hasmyownsubjectclass'] = 0;
+            $d['hasmyownform'] =  0;
+        }
+
+
+        if ($this->exam->last() == Null) {
+            $d['last'] = null;
+        } else {
+            $d['last'] = $this->exam->last();
+        }
+        $d['last'] = $this->exam->last();
+        $d['user'] = Qs::getUserName();
+        $this->user->updateZero();
+        $d['messages'] = $this->message_repo->getMessages(Auth::user()->phone);
+        return view('pages.support_team.exams.index2', $d);
+    }
+
     public function show($id)
     {
         //

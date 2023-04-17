@@ -162,6 +162,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('subjects', 'SubjectController');
         Route::resource('grades', 'GradeController');
         Route::resource('exams', 'ExamController');
+        Route::get('exams2', 'ExamController@exams2')->name('exams2');
         Route::resource('messages', 'MessagesController');
         Route::resource('dorms', 'DormController');
         Route::resource('payments', 'PaymentController');

@@ -2599,6 +2599,9 @@
 
 
     }
+    window.onload = function() {
+        getInitExam();
+    }
 </script>
 
 
