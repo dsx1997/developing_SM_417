@@ -434,9 +434,14 @@
                                             <td class="d-none">` + entry.year + `</td>
                                             <td class="text-center" align="center" style='height:55px;padding:5px !important' rowspan="` + rr + `">
                                                 <div class="col-2" display: flex;justify-content: space-around;>
-                                                    <a class="btn d-flex flex-row" href='/exams/` + entry.id + `' style="color:#172b4c !important; background-color:#e6e6e6; border-color: #999; width: 100px;padding-top:0px;padding-left:10px;font-size:15px;border-radius:8px">
-                                                        <i _ngcontent-are-c166=""><svg _ngcontent-are-c166="" style="margin-right:10px;margin-top:15px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="bi bi-pen"><path _ngcontent-are-c166="" d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"></path></svg></i>
-                                                        <span> Edit<br> Exam</span>
+                                                    <a class="btn d-flex flex-row" href='/exams/` + entry.id + `' style="color:#172b4c !important; background-color:#e6e6e6; border-color: #999; width: 83px;font-size:15px;border-radius:8px; height: 50px;">                                                        
+                                                        <span>
+                                                            <div class="d-flex">
+                                                                <i _ngcontent-are-c166="" style="transform: translate(8px, -12px);"><svg _ngcontent-are-c166="" style="margin-right:10px;margin-top:15px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="bi bi-pen"><path _ngcontent-are-c166="" d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"></path></svg></i>
+                                                                <p class="m-0">Edit</p>
+                                                            </div>
+                                                            <p class="m-0" style="transform: translate(10px, -14px);">Exam</p>
+                                                        </span>
                                                     </a>
                                                 </div>
                                             </td>`;
@@ -496,15 +501,20 @@
                                             </td>`;
                                 } else {
                                     bb += `<td class=action` + ef.exam_id + ef.form_id + ` align="center" style='height:55px;padding:5px !important'>
-                                                <a class="btn publish_btn" style="border-radius:7px;color:white; background-color:#00B6FF; width: 140px; display: flex; flex-direction: row;padding:0px 25px;font-size:16px">
-                                                    <i _ngcontent-sdf-c166="" class="me-1">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" style="margin-right:10px;margin-top:16px" class="bi bi-clipboard-data" viewBox="0 0 16 16">
-                                                            <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"/>
-                                                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
-                                                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
-                                                        </svg>
-                                                    </i>
-                                                    <span> Analyze<br> Results</span>
+                                                <a class="btn publish_btn" style="border-radius:7px;color:white; background-color:#00B6FF; width: 130px; display: flex; flex-direction: row;padding:1px 19px;font-size:16px; height: 50px;">                                                    
+                                                    <span>
+                                                        <div class="d-flex">
+                                                            <i _ngcontent-sdf-c166="" class="me-1" style="transform: translate(8px, -13px);">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" style="margin-right:10px;margin-top:16px" class="bi bi-clipboard-data" viewBox="0 0 16 16">
+                                                                    <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"/>
+                                                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                                                </svg>
+                                                            </i> 
+                                                            <p class="m-0">Analyze</p> 
+                                                        </div>
+                                                        <p class="m-0" style="transform: translate(4px, -13px);">Results</p>
+                                                    </span>
                                                 </a>
                                             </td>`;
 
@@ -518,13 +528,18 @@
                                                 Send Results
                                                 </button>
                                                 <button type="button" class="btn un_publish_result" onclick="unpublish(` + ef.exam_id + `, ` + ef.form_id + `);" >
-                                                    <i _ngcontent-qlf-c166="" class="me-1">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" style="margin-top:8px;float:left;margin-right:10px" width="16" height="16"  fill="currentColor" class="bi bi-box-arrow-in-down" viewBox="0 0 16 16">
-                                                            <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
-                                                            <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                                                        </svg>
-                                                    </i>
-                                                    Unpublish <br> Result
+                                                    <span>
+                                                        <div class="d-flex">
+                                                            <i _ngcontent-qlf-c166="" class="me-1" style="transform: translate(8px, -4px);">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" style="margin-top:8px;float:left;margin-right:10px" width="16" height="16"  fill="currentColor" class="bi bi-box-arrow-in-down" viewBox="0 0 16 16">
+                                                                    <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
+                                                                    <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                                                                </svg>
+                                                            </i>
+                                                            <p class="m-0" style="padding-top: 2px;">Unpublish</p>
+                                                        </div>
+                                                        <p class="m-0" style="transform: translate(6px, -7px);">Result</p>
+                                                    </span>
                                                 </button>
                                             </td>`;
                                 }

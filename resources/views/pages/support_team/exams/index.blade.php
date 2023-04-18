@@ -12,8 +12,9 @@
         color: #CBAB89;
         border: 1px solid #CBAB89;
         border-radius: 8px;
-        width: 150px;
-        padding: 0px 20px;
+        width: 140px;
+        height: 50px;
+        padding: 0px 15px;
         font-size: 16px;
         margin-bottom:2px;
         display: flex;
